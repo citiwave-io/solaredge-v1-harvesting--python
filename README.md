@@ -9,8 +9,27 @@ Briefly describe what this project/script does. Explain its purpose and its func
 List any libraries, frameworks, or tools that are required to run this project. Include versions and any other necessary details.
 
 ### Installing
-- How/where to download your program
-- Any modifications needed to be made to files/folders
+- Clone the repository 
+```shell
+git clone git@github.com:citiwave-io/solaredge-v1-harvesting--python.git
+```
+- Go to the repository
+```shell
+cd solaredge-v1-harvesting--python
+```
+- Create a virtual environment
+
+```shell
+python3 -m venv ./venv
+```
+- Activate the environment
+```shell
+source ./venv/bin/activate
+```
+Install the dependencies
+```shell
+pip install -r requirements.txt
+```
 
 ### Executing program
 - How to run the program
