@@ -1,12 +1,16 @@
 # SolarEdge v1 harvesting (Python)
 
 ## Description
-Briefly describe what this project/script does. Explain its purpose and its functionality. Mention the main features and any unique aspects of the project.
+The SolarEdge v1 Harvesting project is a Python-based tool designed to efficiently collect and process solar energy data from SolarEdge inverters.
+This script interacts with the SolarEdge Monitoring API to retrieve detailed power and energy data, storing it in a structured format.
+The project features functions for fetching data over specific time intervals, converting JSON data to CSV, and ensuring data consistency and accuracy.
+Its primary goal is to facilitate solar energy data analysis by streamlining the data acquisition process.
 
 ## Getting Started
 
 ### Dependencies
-List any libraries, frameworks, or tools that are required to run this project. Include versions and any other necessary details.
+- Python 3.6+
+- `requests` for API interactions
 
 ### Installing
 - Clone the repository 
@@ -32,15 +36,15 @@ pip install -r requirements.txt
 ```
 
 ### Executing program
-- How to run the program
-- Step-by-step bullets
-
-
-...code blocks for commands
-
+- Ensure you have your SolarEdge site ID and API key.  
+- Modify the script parameters with your site ID and API key where indicated.  
+- Execute the script from the command line
+```shell
+python3 your_script_name.py
+```
 
 ## Documentation
-If applicable, provide links to the full documentation for the project.
+For more information on the SolarEdge API, visit the official [SolarEdge Monitoring Server API](https://knowledge-center.solaredge.com/sites/kc/files/se_monitoring_api.pdf)
 
 ## Contributing
 Encourage other developers to contribute to your project.
@@ -48,17 +52,9 @@ Encourage other developers to contribute to your project.
 - Link to the `CONTRIBUTING.md` file if you have detailed contribution guidelines.
 
 ## Version History
-- 0.2
-    - Various bug fixes and optimizations
-    - See [commit change]() or See [release history]()
-- 0.1
+- 0.0.1
     - Initial Release
 
 ## License
-This project is licensed under the [LICENSE NAME] - see the `LICENSE.md` file for details
+This project is licensed under the [GNU GENERAL PUBLIC LICENSE] - see the `LICENSE` file for details
 
-## Acknowledgments
-Inspiration, code snippets, etc.
-- [project1]()
-- [project2]()
-- [etc]()

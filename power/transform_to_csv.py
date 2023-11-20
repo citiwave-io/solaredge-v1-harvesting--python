@@ -61,3 +61,9 @@ def data_to_csv(data, csv_file_path):
 
     print(f"Data successfully written to {csv_file_path}")
 
+def json_folder_to_csv(json_folder, csv_folder, site_id):
+    json_folder_path = os.path.join(json_folder, site_id, "power-details")
+    csv_file_path = os.path.join(csv_folder, site_id, "power-details.csv")
+    data = prepare_data_from_json(json_folder_path)
+    data_to_csv(data, csv_file_path)
+

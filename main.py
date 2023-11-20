@@ -3,9 +3,9 @@ from equipment import transform_to_csv as equipment_transformer
 from power import download as power_downloader
 from power import transform_to_csv as power_transformer
 
-api_key = ""  # Replace with your actual API key
-site_id = ""       # Replace with your actual site ID
-inverter_id = ""  # Replace with your actual inverter ID
+api_key = "API_KEY"  # Replace with your actual API key
+site_id = "123456"       # Replace with your actual site ID
+inverter_id = "ABCDEFGH-01"  # Replace with your actual inverter ID
 #max_back_days = 5*365  # 5 years ago
 max_back_days = 7*2  # 2 weeks ago
 
@@ -17,9 +17,7 @@ equipment_transformer.json_folder_to_csv("./temp", "./data", site_id, inverter_i
 
 
 # Get power details
-# Download raw data
+# Download raw data (creates multiple json files)
 power_downloader.fetch_power_details(api_key, site_id, max_back_days)
-json_folder_path = f"./temp/{site_id}/power-details"
-csv_file_path = f"./data/{site_id}/power-details.csv"
-data = power_transformer.prepare_data_from_json(json_folder_path)
-power_transformer.data_to_csv(data, csv_file_path)
+# Transform raw data to csv (creates single file)
+power_transformer.json_folder_to_csv("./temp", "./data", site_id)
