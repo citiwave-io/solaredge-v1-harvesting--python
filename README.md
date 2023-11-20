@@ -40,7 +40,7 @@ pip install -r requirements.txt
 - Modify the script parameters with your site ID and API key where indicated.  
 - Execute the script from the command line
 ```shell
-python3 your_script_name.py
+python3 main.py
 ```
 
 ## Documentation
