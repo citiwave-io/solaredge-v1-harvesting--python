@@ -6,13 +6,13 @@ def configure_logger():
     logger.setLevel(logging.DEBUG)  # Capture all levels of log
 
     # File Handler for error logs
-    error_handler = logging.FileHandler('errors.log')
+    error_handler = logging.FileHandler('errors-only.log')
     error_handler.setLevel(logging.ERROR)
     error_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     error_handler.setFormatter(error_formatter)
 
     # File Handler for info logs
-    info_handler = logging.FileHandler('info.log')
+    info_handler = logging.FileHandler('all.log')
     info_handler.setLevel(logging.INFO)
     info_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     info_handler.setFormatter(info_formatter)
