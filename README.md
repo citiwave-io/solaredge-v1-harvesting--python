@@ -39,6 +39,7 @@ pip install -r requirements.txt
 - Ensure you have your SolarEdge site ID and API key.  
 - Modify the script parameters with your site ID and API key where indicated.  
 - Execute the script from the command line
+- See all the logs in all.log file. You can find errors in errors-only.log file
 ```shell
 python3 main.py
 ```
@@ -53,7 +54,9 @@ Encourage other developers to contribute to your project.
 
 ## Version History
 - 0.0.1
-    - Initial Release
+  - Initial Release
+- 0.0.2
+  - Configured logger
 
 ## License
 This project is licensed under the [GNU GENERAL PUBLIC LICENSE] - see the `LICENSE` file for details
