@@ -1,12 +1,17 @@
 import json
 import csv
+import logging
 import os
 from datetime import datetime
+
+logger = logging.getLogger('my_logger')
+
 
 def get_start_date_from_filename(filename):
     # Extract the start date from the filename
     start_str = filename.split('/')[-1].split('_')[0]
     return datetime.strptime(start_str, "%Y-%m-%d %H:%M:%S")
+
 
 def prepare_data_from_json(json_folder):
     all_data = []
@@ -39,10 +44,11 @@ def prepare_data_from_json(json_folder):
 
     return all_data
 
+
 def data_to_csv(data, csv_file_path):
     # Check if data is available
     if not data:
-        print("No data to write to CSV file.")
+        logger.error("No data to write to CSV file.")
         return
 
     # Writing to CSV
@@ -59,7 +65,8 @@ def data_to_csv(data, csv_file_path):
         for row in data:
             writer.writerow(row)
 
-    print(f"Data successfully written to {csv_file_path}")
+    logger.info(f"Data successfully written to {csv_file_path}")
+
 
 def json_folder_to_csv(json_folder, csv_folder, site_id):
     json_folder_path = os.path.join(json_folder, site_id, "power-details")

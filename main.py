@@ -1,11 +1,15 @@
+from logger.configure import configure_logger
 from equipment import download as equipment_downloader
 from equipment import transform_to_csv as equipment_transformer
 from power import download as power_downloader
 from power import transform_to_csv as power_transformer
 
+configure_logger()
+
 api_key = "API_KEY"  # Replace with your actual API key
 site_id = "123456"       # Replace with your actual site ID
 inverter_id = "ABCDEFGH-01"  # Replace with your actual inverter ID
+
 #max_back_days = 5*365  # 5 years ago
 max_back_days = 7*2  # 2 weeks ago
 

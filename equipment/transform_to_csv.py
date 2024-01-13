@@ -1,7 +1,11 @@
 import json
 import csv
 import os
+import logging
 from datetime import datetime
+
+logger = logging.getLogger('my_logger')
+
 
 def flatten_data(data_entry):
     # Flatten the nested L1Data, L2Data, and L3Data
@@ -12,10 +16,12 @@ def flatten_data(data_entry):
             del data_entry[key]
     return data_entry
 
+
 def get_start_date_from_filename(filename):
     # Extract the start date from the filename
     start_str = filename.split('/')[-1].split('_')[0]
     return datetime.strptime(start_str, "%Y-%m-%d %H:%M:%S")
+
 
 def json_folder_to_csv(json_folder, csv_folder, site_id, inverter_id):
     # Construct file paths
@@ -30,7 +36,7 @@ def json_folder_to_csv(json_folder, csv_folder, site_id, inverter_id):
 
     # Check if there is at least one JSON file
     if not json_files:
-        print("No JSON files found in the folder.")
+        logger.error("No JSON files found in the folder.")
         return
 
     # Create an empty list to hold the data and a set for all field names
@@ -69,6 +75,6 @@ def json_folder_to_csv(json_folder, csv_folder, site_id, inverter_id):
             for row in all_data:
                 writer.writerow(row)
 
-        print(f"Data from {len(json_files)} JSON files has been successfully written to {csv_file_path}.")
+        logger.info(f"Data from {len(json_files)} JSON files has been successfully written to {csv_file_path}.")
     else:
-        print("No data to write to CSV file.")
+        logger.error("No data to write to CSV file.")
