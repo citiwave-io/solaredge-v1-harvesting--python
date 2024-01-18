@@ -45,8 +45,8 @@ python3 main.py
 ```
 
 ## Documentation
-For more information on the SolarEdge API, visit the official [SolarEdge Monitoring Server API](https://knowledge-center.solaredge.com/sites/kc/files/se_monitoring_api.pdf)
-
+- For more information on the SolarEdge API, visit the official [SolarEdge Monitoring Server API](https://knowledge-center.solaredge.com/sites/kc/files/se_monitoring_api.pdf)  
+- Read more about [Logger](docs/Logger.md) here
 ## Contributing
 Encourage other developers to contribute to your project.
 - Briefly explain the process for submitting pull requests.
