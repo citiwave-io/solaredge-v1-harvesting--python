@@ -1,4 +1,4 @@
-# SolarEdge v1 harvesting (Python)
+# SolarEdge v1 API (Python)
 
 ## Description
 The SolarEdge v1 Harvesting project is a Python-based tool designed to efficiently collect and process solar energy data from SolarEdge inverters.
